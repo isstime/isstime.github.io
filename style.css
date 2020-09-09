@@ -25,9 +25,14 @@ html{
   color:var(--body-font-color);
   scroll-behavior:smooth;
 }
+body{
+  overflow-x:hidden;
+  }
+}
 
 section{
   padding: 3.9rem 0;
+  overflow: hidden;;
 }
 img{
   width: 100%;
@@ -145,7 +150,7 @@ header{
 .hero{
   width: 100%;
   height: 100vh;
-  background: url("https://colostrumeurope.eu/wp-content/uploads/2018/12/46A1114-687x1030-home.jpg") center no-repeat;
+  background: url("https://cpb-us-w2.wpmucdn.com/sites.udel.edu/dist/2/2531/files/2020/05/Spring-CBI-Virtual-Symposium-2020-1080x537.jpg") center no-repeat;
   background-size:cover;
   display:flex;
   align-items:center;
@@ -159,6 +164,9 @@ header{
   font-weight:100;
   height:38px;
   letter-spacing:2px;
+  opacity: 0;
+  animation:fadeup .5s forwards;
+  animation-delay:.5s;
   
  }
 .first-letter{
@@ -175,6 +183,10 @@ header{
   letter-spacing:.5rem;
   margin-right:-.5rem;
   margin-bottom:-2px;
+  
+  animation:scale .5s forwards;
+  animation-delay:.5s;
+  
   }
 
 .separator{
@@ -188,6 +200,11 @@ header{
   height:.25rem;
   background-color:#fff;
   position:relative;
+  opacity: 0;
+  animation:grow 2s forwards;
+  animation-delay:.9s;
+  
+  
 }
 .line-right::before,
 .line-left::before{
@@ -196,6 +213,9 @@ header{
   top: 50%;
   transform:translatey(-50%);
   border:.6rem dotted transparent ;
+  animation:grow .5s forwards;
+  animation-delay:1.2s;
+  
   
 }
 .line-right::before{
@@ -212,7 +232,16 @@ header{
   font-size:1.2rem;
   color:var(--secondary-font-color);
   margin:0 1.6rem;
+  animation: spin 1.5s forwards;
+animation-delay:.7s;
 }
+
+.single-animation{
+  opacity: 0;
+    animation:fadedown .5s forwards;
+  animation-delay:1.5s;
+}
+
 
 .headline-description h5{
   color:#fff;
@@ -305,6 +334,231 @@ header{
 }
 
 /* tasteful recipes */
+.tasteful-recipes{
+  background:url("https://scientect.com/wp-content/uploads/2020/08/Chemicals-Materials.jpg") center no-repeat;
+  background-size:cover;
+  border:dotted 2px red;
+}
+.between{
+  min-height:65vh;
+  display:flex;
+  align-items:center;
+}
+/*menu*/
+.image-group{
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+    grid-gap:1.5rem;
+    border: dotted 3px blue;
+  
+}
+.discover-our-manu{
+  padding-top:3rem;
+  margin-bottom:0;
+}
+/*blend*/
+.perfect-blend{
+  background: url("https://www.samcotech.com/app/uploads/2017/11/What-Is-Ion-Exchange-Resin-and-How-Does-It-Work.jpg") center no-repeat;
+  background-size:cover;  
+}
+/* footer*/
+footer{
+padding: .9rem 0;
+   background-color:#121212;
+  color: #fff;
+  text-align:cemter;
+  }
+.back-to-top{
+  width: 7rem;
+height: 7rem;
+  background-color:#121212;
+  position: relative;
+  top:-3.5rem;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius:50%;
+  
+}
+.back-to-top i{
+  display: block;
+  color:#fff;
+  font-size:2rem;
+  padding:2rem;
+  animation:up 2s infinite;
+  text-align:center;
+  
+}
+
+.footer-content{
+ overflow: hidden;;
+  }
+.footer-content h4{
+  font-size:1.9rem;
+  text-transform:uppercase;
+  font-weight:100;
+  letter-spacing:3px;
+  margin-bottom:3rem;
+}
+.footer-content .asterisk{
+  margin: 2.4rem 0;
+  
+}
+.footer-content-about{
+  margin-bottom:5.4rem;
+  
+}
+.footer-content-about p{
+  line-height:2;
+ 
+}
+.social-icons{
+  list-style:none;
+  margin-bottom:5.4rem;
+  display:flex;
+  justify-content:center;
+  
+}
+.social-icons i{
+  font-size:2rem;
+  color: #fff;
+  padding:.8rem 2rem;
+  opacity:.5;
+  transition:color .5s;
+  
+}
+.social-icons i:hover,
+.social-icons i:focus{
+  color: var(--secondary-font-color);
+}
+.newsletter-form{
+  width:100%;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  
+}
+.newsletter-input{
+  width:100%;
+  max-width:25rem;
+  padding: 1rem;
+  border-radius:.4rem;
+  
+}
+.newsletter-btn{
+  background-color:transparent;
+  border: none;
+  color:var(--main-font-color-dark);
+  cursor: pointer;
+  font-size:1.6rem;
+  padding: 1px .6rem;
+  position:absolute;
+  top: 50%;
+  transform:translatey(-50%);
+margin-left:10.5rem;
+}
+
+/*media queries*/
+@media screen and (min-width: 900px){
+  section{
+    padding: 7.9rem;
+  }
+  .menu-toggle{
+    display:none;
+    
+  }
+  .nav{
+    justify-content:space-between;
+    
+  }
+  .nav-list{
+    position: initial;
+    width: initial;
+  height: initial;
+  background-color:transparent;
+    padding:0;
+    justify-content:initial;
+    flex-direction:row;
+    transform:initial;
+    transition: initial;
+    
+  }
+  .nav-item{
+    margin-left:0 2.4rem;
+    border:none;
+  }
+  .nav-item:last-child{
+    margin-right:0;
+  }
+  .nav-link{
+    font-size:1.5rem;
+    
+  }
+  .active{
+    position: relative;
+  }
+  .active::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color:#fff;
+    left: 0;
+    bottom: -3px;
+  }
+  .sub-headline{
+    font-size:10rem;
+    
+  }
+  .first-letter{
+    font-size:12.2rem;
+    
+  }
+
+  .headline{
+    font-size:4.7rem;
+    letter-spacing:.8rem;
+  }
+  .line{
+    max-width:11.4rem;
+    
+  }
+  .restaurant-info{
+    display: flex;
+    align-items:center;
+  }
+  .restaurant.info > div{
+    flex: 1;
+  }
+  .padding-right{
+    padding-right:7rem;
+    
+  }
+  .footer-content{
+    max-width:77.5rem;
+    margin: auto;
+    border: dotted 4px black;
+  }
+  .footer-content-about{
+    max-width:51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+  .footer-content-divider{
+    display: flex;
+    justify-content:space-between;
+  }
+  .social-media,
+  .newsletter-form{
+    width: 100%;
+    max-width:27.3rem;
+    margin: 0 1rem;
+  }
+  .social-icons{
+    opacity: 1;
+  }
+  .newsletter-btn{
+    margin-left:7.5rem;
+  }
+}
 
 
 
@@ -312,4 +566,68 @@ header{
   width:10%;
   margin-top:15px;
     
+}
+
+/*animate*/
+@keyframes fadeup {
+  0%{
+    transform: translatey(4rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+@keyframes scale {
+  0%{
+    transform: scale(2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes grow {
+  0%{
+    width:0;
+  }
+  100%{
+    opacity: 1;
+    width:100%;
+  }
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes fadedown {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+   
+  }
+  100%{
+    opacity: 0;
+    transform: translatey(-1rem);
+  }
+}
+@keyframes up {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+   
+  }
+  100%{
+    opacity: 0;
+    transform: translatey(-1rem);
+  }
 }
