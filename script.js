@@ -1,38 +1,27 @@
-//select element function//
-const selectElement = function (element) {
-  return document.querySelector(element);
-};
-
-let menuToggler = selectElement('.menu-toggle');
-let body = selectElement('body');
-menuToggler.addEventListener('click', function(){
-  body.classList.toggle('open');
+const hamburger = document.querySelector(
+  ".header .nav-bar .nav-list .hamburger"
+);
+const mobile_menu = document.querySelector(".header .nav-bar .nav-list ul");
+const menu_item = document.querySelectorAll(
+  ".header .nav-bar .nav-list ul li a"
+);
+const header = document.querySelector(".header.container");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobile_menu.classList.toggle("active");
+});
+document.addEventListener("scroll", () => {
+  var scroll_position = window.scrollY;
+  if (scroll_position > 250) {
+    header.style.backgroundColor = "#29323c";
+  } else {
+    header.style.backgroundColor = "transparent";
+  }
+});
+menu_item.forEach((item) => {
+  item.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobile_menu.classList.toggle("active");
+  });
 });
 
-//scroll reveal
-window.sr = ScrollReveal();
-
-sr.reveal('.animate-left',{
-  origin:'left',
-  duration:1000,
-  distance:'25rem',
-  delay:300
-});
-sr.reveal('.animate-right',{
-  origin:'right',
-  duration:1000,
-  distance:'25rem',
-  delay:600
-});
-sr.reveal('.animate-top',{
-  origin:'top',
-  duration:1000,
-  distance:'25rem',
-  delay:600
-});
-sr.reveal('.animate-bottom',{
-  origin:'bottom',
-  duration:1000,
-  distance:'25rem',
-  delay:600
-});
