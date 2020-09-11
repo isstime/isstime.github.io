@@ -44,6 +44,27 @@ p {
 .section-title span {
   color: crimson;
 }
+
+
+
+/*added present year text */
+.section-title1 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+   text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title1 span {
+  color: crimson;
+}
+
+/* end of present year text*/
+
+
+
+
 .cta {
   display: inline-block;
   padding: 10px 30px;
@@ -51,15 +72,23 @@ p {
   background-color: transparent;
   border: 2px solid crimson;
   font-size: 2rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 0.1rem;
   margin-top: 30px;
   transition: 0.3s ease;
   transition-property: background-color, color;
+  /* added animation*/
+  animation:scale 1s forwards;
+  animation-duration:10s;
+  
 }
 .cta:hover {
   color: white;
+  opacity:89%;
   background-color: crimson;
+  /*animatino added*/
+  
+  
 }
 .brand h1 {
   font-size: 3rem;
@@ -198,7 +227,7 @@ p {
 
 /* Hero Section */
 #hero {
-  background-image: url("https://raw.githubusercontent.com/isstime/isstime.github.io/master/Cover.jpg");
+  background-image: url("https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg");
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -259,6 +288,8 @@ p {
 #hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 } /* End Hero Section */
+
+
 /* Services Section */
 #services .services {
   flex-direction: column;
@@ -266,10 +297,13 @@ p {
   max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
+ /* this is the end of the container section*/
+  
 }
 #services .service-top {
   max-width: 500px;
   margin: 0 auto;
+ /* this is the skils text border: yellow 5px dotted; */
 }
 #services .service-bottom {
   display: flex;
@@ -277,7 +311,172 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
+  /* this is the container for the skills icons border:dotted 5px black;*/
 }
+
+/* added SERVICE 1 */
+
+#services .service-item1 {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+}
+#services .service-item1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.9;
+  z-index: -1;
+  
+}
+#services .service-bottom .icon1 .img1 {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  justify-items:space-between;
+  border:dotted 4px red;
+  paddig: 55px;
+  
+}
+/*added to change radius of image */
+.img1{
+  border-radius:25px;
+}
+  #services .service-item1 h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#services .service-item1 p {
+  color: white;
+  text-align: left;
+  
+} 
+/* end of first service */
+
+/* start 2nd service */
+#services .service-item2 {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+}
+#services .service-item2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.9;
+  z-index: -1;
+ 
+}
+#services .service-bottom .icon2 .img2 {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  
+}
+/*added to change radius of image */
+.img2{
+  border-radius:25px;
+}
+  #services .service-item2 h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#services .service-item2 p {
+  color: white;
+  text-align: left;
+
+} 
+
+/*end of 2nd service*/
+
+/*start of 3rd service*/
+#services .service-item3 {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+}
+#services .service-item3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.9;
+  z-index: -1;
+ 
+}
+#services .service-bottom .icon3 .img3 {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+  
+}
+/*added to change radius of image */
+.img3{
+  border-radius:25px;
+}
+  #services .service-item3 h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#services .service-item3 p {
+  color: white;
+  text-align: left;
+
+} 
+
+
+
+/* this is the last box of the skills area */
 #services .service-item {
   flex-basis: 80%;
   display: flex;
@@ -292,6 +491,8 @@ p {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  /*this is the last box border: 8px red dotted;*/
+  
 }
 #services .service-item::after {
   content: "";
@@ -303,11 +504,14 @@ p {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   opacity: 0.9;
   z-index: -1;
+  /* last box of the skills box border: 4px dotted blue;*/
 }
+/*image border inside the skills box */
 #services .service-bottom .icon {
   height: 80px;
   width: 80px;
   margin-bottom: 20px;
+  /* image wrap border: 4px dotted pink;*/
 }
 #services .service-item h2 {
   font-size: 2rem;
@@ -318,33 +522,53 @@ p {
 #services .service-item p {
   color: white;
   text-align: left;
-} /* End Services Section */
+ /*inside de skills box border: green 4px dashed;*/
+} 
+/* End Services Section */
+
+
+
 /* Projects section */
+
 #projects .projects {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  /*border:5px dotted red;*/
+  
 }
 #projects .projects-header h1 {
   margin-bottom: 50px;
+/*  border: 5px dotted green;*/
 }
+
+
+
 #projects .all-projects {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+ /* border: 5px dotted pink;*/
 }
+
+/*border around the 2018-present*/
 #projects .project-item {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 80%;
-  margin: 20px auto;
+  margin: .5px auto;
   overflow: hidden;
   border-radius: 10px;
+
 }
+/*end of border around the 2018-present*/
+
+
+
 #projects .project-info {
   padding: 30px;
   flex-basis: 50%;
@@ -368,12 +592,18 @@ p {
 #projects .project-info p {
   color: white;
 }
+
 #projects .project-img {
   flex-basis: 50%;
-  height: 300px;
+   /* removed  height: 300px;*/
+  
+ /*added*/ width:100%;
   overflow: hidden;
   position: relative;
 }
+
+
+
 #projects .project-img:after {
   content: "";
   position: absolute;
@@ -437,6 +667,7 @@ p {
   border: 7px solid crimson;
   z-index: -1;
 } /* End About Section */
+
 /* contact Section */
 #contact .contact {
   flex-direction: column;
@@ -478,6 +709,7 @@ p {
   line-height: 2rem;
   font-weight: 500;
 } /*End contact Section */
+
 /* Footer */
 #footer {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -516,6 +748,7 @@ p {
   color: white;
   font-size: 1.3rem;
 } /* End Footer */
+
 /* Keyframes */
 @keyframes hamburger_puls {
   0% {
@@ -548,6 +781,8 @@ p {
     font-weight: 500;
   }
 } /* End Keyframes */
+
+
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
   .cta {
@@ -563,7 +798,8 @@ p {
   #services .service-bottom .service-item {
     flex-basis: 45%;
     margin: 2.5%;
-  } /* End Services Section */ /* Project */
+  }
+  /* End Services Section */ /* Project */
   #projects .project-item {
     flex-direction: row;
   }
@@ -582,6 +818,11 @@ p {
   #projects .all-projects .project-img {
     height: 100%;
   } /* End Project */
+  
+  
+  
+  
+  
   /* About */
   #about .about {
     flex-direction: row;
@@ -665,3 +906,30 @@ p {
     margin: 1.5%;
   }
 } /* End Media Query For Desktop */
+
+/*animations*/
+@keyframes scale {
+  0%{
+    opacity:0;
+    transform: scale(2);
+  }
+  /*added extra */
+  35%{
+    opacity:0;
+    transform: scale(2);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  @keyframes spin{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
